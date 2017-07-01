@@ -41,7 +41,7 @@ function ExchangeController($interval) {
         } else {
           this.price += change;
         }
-        if(this.avgPricePaid == 0) {
+        if (this.avgPricePaid == 0) {
           this.sellNow = false;
         } else if (this.avgPricePaid > this.price) {
           this.sellNow = false;
@@ -71,7 +71,7 @@ function ExchangeController($interval) {
 
     sell() {
       if (this.inventory == 0) {
-        alert("You ain't got none to sell, yo!");
+        alert("OUT OF INVENTORY!");
       } else {
         this.inventory--;
         vm.cash += this.price;
@@ -102,7 +102,7 @@ function ExchangeController($interval) {
         } else {
           this.price += change;
         }
-        if(this.avgPricePaid == 0) {
+        if (this.avgPricePaid == 0) {
           this.sellNow = false;
         } else if (this.avgPricePaid > this.price) {
           this.sellNow = false;

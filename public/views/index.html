@@ -38,7 +38,7 @@ crossorigin="anonymous">
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-xs-6 col-sm-3 col-lg-2" ng-repeat="x in ec.objectArray">
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2" ng-repeat="x in ec.objectArray">
         <div class="itemBox" ng-class="{true:'green', false:''}[x.sellNow]">
         <button class="btn btn-block imgbutton"><img class="img-responsive" ng-src="{{x.imageSrc}}" ng-click="x.buy()"/><span class="invent">{{x.inventory}}</span>
         </button>
