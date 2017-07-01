@@ -13,32 +13,44 @@
 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
-
-  <title>Ω Exchange</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+  </style>
+  <title><span class="titleomega">Ω</span> Exchange</title>
 </head>
 <body ng-app="myApp">
   <main ng-controller="ExchangeController as ec">
+    <h1 class="title"><span class="titleomega">Ω</span> Exchange</h1>
 
-  <h1>Ω Exchange</h1>
-  <h2>You have: {{ec.cash | currency}}</h2>
-  <h3>Change of:  {{ec.cash - 100 | currency}}</h3>
-  <h3>{{ec.roundsLeft}} rounds left</h3>
-  <div class="text-center"><button class="btn btn-primary" ng-show="ec.buttonShow" ng-click="ec.startGame()">Ω START</button></div>
+  <div class="container">
+      <div class="col-sm-6 col-sm-offset-3">
+  <div class="toppart">
+
+  <h2>You have: <span class="dollars">{{ec.cash | currency}}</span></h2>
+  <h3 class="change">Change of:  {{ec.cash - 100 | currency}}</h3>
+  <h3 class="roundsleft">{{ec.roundsLeft}} rounds left</h3>
+
+</div>
+  <div class="text-center"><button class="btn btn-primary startgamebutton" ng-show="ec.buttonShow" ng-click="ec.startGame()">Ω START</button></div>
+</div>
+</div>
+
   <div class="container-fluid">
+
     <div class="row">
       <div class="col-xs-6 col-sm-3 col-lg-2" ng-repeat="x in ec.objectArray">
         <div class="itemBox" ng-class="{true:'green', false:''}[x.sellNow]">
-
-        <button class="btn btn-block"><img class="img-responsive" ng-src="{{x.imageSrc}}" ng-click="x.buy()"/><span class="invent">{{x.inventory}}</span>
+        <button class="btn btn-block imgbutton"><img class="img-responsive" ng-src="{{x.imageSrc}}" ng-click="x.buy()"/><span class="invent">{{x.inventory}}</span>
         </button>
-        <p><strong>{{x.name}}, {{x.price | currency}}</strong>
+        <h3 class="">{{x.name}} <span class="currency"> {{x.price | currency}}</span></h3>
           <br>
         <!-- <p ng-if="x.inventory == 1">You have: {{x.inventory}} {{x.name}}</p>
         <p ng-if="x.inventory > 1">You have: {{x.inventory}} {{x.name}}s</p>
         <p ng-if="x.inventory == 0">You have none</p> -->
-        Average Price Paid: {{x.avgPricePaid | currency}}</p>
-        <p ng-if="x.perishCount > -1">Will go bad in: {{x.perishCount}}</p>
-        <button class="btn btn-warning btn-block" ng-click="x.sell()">Sell 1 {{x.name}}</button>
+        <h5>Avg. Price Paid: {{x.avgPricePaid | currency}}</h5 >
+          <hr />
+        <p class="perish" ng-if="x.perishCount > -1">Will go bad in: <span class="perishspan">{{x.perishCount}}</span></p>
+        <button class="btn btn-warning btn-block sellbutton" ng-click="x.sell()">Sell 1 {{x.name}}</button>
         </div>
       </div>
     </div>

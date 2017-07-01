@@ -1,26 +1,149 @@
+.title {
+  font-size: 30px;
+  font-weight: 200;
+  background: #FF5722;
+  padding: 10px 0;
+  top: 0 !important;
+  margin-top: 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titleomega {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.startgamebutton {
+  color: #fff;
+  background-color: #FF5722;
+  border-color: #FF5722;
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 100;
+  padding: 10px 40px;
+}
+
+.startgamebutton:hover {
+  background: #B0BEC5;
+}
+
+.roundsleft {
+  font-weight: 900;
+  font-family: Roboto;
+  margin-bottom: 15px;
+}
+
+.dollars {
+  font-weight: 900;
+  font-family: Roboto;
+  font-size: 50px;
+}
+
+.change {
+  font-weight: 100;
+  font-family: Roboto;
+  background: #f5f6f7;
+  padding: 15px;
+}
+
+.toppart {
+  border: 1px solid #000;
+  margin: 30px;
+}
+
 h1, h2, h3 {
   text-align: center;
 }
 
+h1 {
+  font-size: 35px;
+  font-weight: 300;
+  margin: 15px 0 0;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: Roboto;
+}
+
+.h5, h5 {
+  font-size: 14px;
+  text-align: center;
+  margin: -5px 0;
+}
+
+.currency {
+  background: #fff;
+  font-weight: 700;
+  padding: 5px;
+  font-size: 40px;
+  display: block;
+  margin-top: 10px;
+}
+
 .itemBox {
   padding: 15px;
+  margin-bottom: 20px;
+  background: #f5f6f7;
 }
-img{
-  width:100%;
+
+img {
+  width: 100%;
 }
 
 .green {
-  background-color: #226600;
+  background-color: #DCEDC8;
 }
 
 span {
   font-size: 16px;
 }
 
-.invent{
-  font-size: 24px;
+.invent {
+  font-size: 35px;
+  font-weight: 900;
+  border-radius: 10px;
+  color: #000;
 }
 
 p {
   text-align: center;
+}
+
+.perish {
+  background: #FFEB3B;
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+  margin: -30px 30px 10px;
+  text-transform: uppercase;
+}
+
+.perishspan {
+  font-weight: 800;
+}
+
+.sellbutton {
+  display: block;
+  width: 100%;
+  background: #FF5722;
+  border: 2px solid;
+}
+
+.sellbutton:hover {
+  display: block;
+  width: 100%;
+  background: #263238;
+  border: 2px solid;
+}
+
+.imgbutton {
+  display: block;
+  width: 100%;
+  background: #B0BEC5;
+  padding: 20px;
 }
